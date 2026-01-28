@@ -25,7 +25,7 @@ class TaskRepoPostgreSQL(TaskPort):
         new_task = {"id": str(new_id), "name": name, "description": description}
         self.tasks.append(new_task)
         ###
-        return TaskPort.create(new_task["id"], new_task["name"], new_task["description"])
+        return TaskEntity.create(new_task["id"], new_task["name"], new_task["description"])
 
 
     def getAllTask(self) -> List[TaskEntity]:
@@ -33,4 +33,4 @@ class TaskRepoPostgreSQL(TaskPort):
         # tasks = get all de postgresql
         tasks = self.tasks
         ## 
-        return [ TaskPort.create(t["id"], t["name"], t["description"]) for t in tasks]
+        return [ TaskEntity.create(t["id"], t["name"], t["description"]) for t in tasks]

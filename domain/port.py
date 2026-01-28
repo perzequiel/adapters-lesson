@@ -26,17 +26,3 @@ class TaskPort(ABC):
         Docstring for getAllTask
         """
         pass
-
-    @staticmethod
-    def create(id: str, name: str, description: str):
-        """
-        Docstring for create
-        
-        :param id: Description
-        :type id: str
-        :param name: Description
-        :type name: str
-        :param description: Description
-        :type description: str
-        """
-        return TaskEntity(id=id, name=name, description=description)
